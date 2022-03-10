@@ -1,0 +1,22 @@
+#scores{
+    background-color: black;
+    color: blue;
+    flex-grow: 0.5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    border-color: red;
+    border-style: dotted;
+}
+
+.everything{
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+

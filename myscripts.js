@@ -2,8 +2,10 @@ const choices = ["ROCK", "PAPER", "SCISSORS"];
 
 let playerScore = 0;
 let computerScore = 0;
+let ties = 0;
 document.getElementById("playerScore").textContent = playerScore;
 document.getElementById("computerScore").textContent = computerScore;
+document.getElementById("ties").textContent = ties;
 
 //Returns string which is computer's random choice from the choices array
 function computerPlay(){
@@ -56,6 +58,7 @@ buttons.forEach((button) => {
         
         if(playerSelection === computerSelection){
             console.log(`Player chose: ${playerSelection} \nComputer chose: ${computerSelection} \n It's a tie!`);        //tie
+            ties++;
         }
         else if ((computerSelection ==="PAPER" && playerSelection === "ROCK") || 
         (computerSelection ==="SCISSORS" && playerSelection === "PAPER") || 
@@ -73,6 +76,7 @@ buttons.forEach((button) => {
         else{console.log("You didn't enter a valid choice, round skipped.")}
         document.getElementById("playerScore").textContent = playerScore;
         document.getElementById("computerScore").textContent = computerScore;
+        document.getElementById("ties").textContent = ties;
         if(playerScore===5 ){
             document.write("YOU WIN!!!!!!!!!");
         }
